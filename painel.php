@@ -1,6 +1,5 @@
 <?php
 include "./src/controller/protege_pagina.php";
-include "./src/controller/logout.php";
 ?>
 
 <!DOCTYPE html>
