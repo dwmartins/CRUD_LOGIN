@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--cinzaClaro2);
+    position: relative;
 }
 
 .login > form, .criar_usuario > form {
@@ -101,5 +102,40 @@
     color: var(--verde);
 }
 
-/* Pagina inicial logado */
+/* VALIDAÇÕES */
 
+.alert-danger {
+    display: flex;
+    align-items: center;
+
+    background-color: #F8D7DA;
+    color: #ff2525;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 40px;
+    width: 80%;
+    position: absolute;
+    top: 10px;
+}
+
+.alert-danger i {
+    margin-right: 10px;
+}
+
+.alert-cadastrado {
+    display: flex;
+    align-items: center;
+
+    background-color: #D1E7DD;
+    color: #0F5132;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 40px;
+    width: 80%;
+    position: absolute;
+    top: 10px;
+}
+
+.alert-cadastrado i {
+    margin-right: 10px;
+}
