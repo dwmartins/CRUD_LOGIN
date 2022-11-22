@@ -1,5 +1,6 @@
 <?php
 include('./src/controller/conexao.php');
+include('./src/controller/criar_usuario.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,23 +16,25 @@ include('./src/controller/conexao.php');
 <body>
     
     <nav class="nav_login">
-        <a href="#">
+        <a href="index.php">
             <h1>CRUD</h1>
         </a>
     </nav>
 
     <section class="criar_usuario">
-        <form action="">
-            <label for="">Nome</label>
-            <input type="text">
+        <form action="" method="POST">
+            <label for="" >Nome</label>
+            <input type="text" name="nome">
 
             <label for="">E-mail</label>
-            <input type="email">
+            <input type="email" name="email">
 
             <label for="">Senha</label>
-            <input type="password">
+            <input type="password" name="senha">
 
-            <button type="submit">CRIAR USUÁRIO</button>
+            <button>CRIAR USUÁRIO</button>
+
+            <p>Já possui conta? <a href="index.php">Entrar.</a></p>
         </form>
     </section>
 </body>

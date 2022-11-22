@@ -27,6 +27,9 @@
     display: flex;
     align-items: center;
     padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav_login a {
@@ -73,7 +76,7 @@
     color: var(--cinzaEscuro);
 }
 
-.login > form button{
+.login > form button, .criar_usuario > form button{
     height: 30px;
     cursor: pointer;
     border: none;
@@ -84,33 +87,19 @@
     margin-bottom: 15px;
 }
 
-.login > form button:hover {
+.login > form button:hover, .criar_usuario > form button:hover {
     background-color: var(--verdeEscuro);
     transition: 0.5s;
 }
 
-.login > form p {
+.login > form p, .criar_usuario > form p {
     color: var(--cinzaEscuro);
     font-size: 14px;
 }
 
-.login > form p a {
+.login > form p a, .criar_usuario > form a {
     color: var(--verde);
 }
 
+/* Pagina inicial logado */
 
-/* Pagia de decadastro */
-.criar_usuario > form button {
-    height: 30px;
-    cursor: pointer;
-    border: none;
-    background-color: var(--verde);
-    color: #fff;
-    font-weight: bold;
-    border-radius: 3px;
-}
-
-.criar_usuario > form button:hover {
-    background-color: var(--verdeEscuro);
-    transition: 0.5s;
-}
