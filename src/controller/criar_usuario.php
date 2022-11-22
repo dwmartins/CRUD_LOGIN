@@ -16,7 +16,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $quantidade = $sql_query->num_rows;
        
         if($quantidade == 1) {
-            // echo "Este email já está sendo utilizado!";
         
             $_SESSION['alert'] = $alert = [];
             $alert = [
