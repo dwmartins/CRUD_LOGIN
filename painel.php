@@ -22,7 +22,21 @@ include "./src/controller/protege_pagina.php";
         <a href="./src/controller/logout.php">Sair</a>
     </nav>
 
-    <h1>Bem vindo ao Painel, <?php echo $_SESSION['nome'];?></h1>
+    <section class="painel">
+        <div class='menu'>
+            <h4>Menu</h4>
+
+            <div>
+                <a href="#">
+                    <img src="./src/img/abrir_chamado.png" alt="Abrir chamado">
+                </a>
+
+                <a href="chamados.php">
+                    <img src="./src/img/consultar_chamado.png" alt="Consultar chamado">
+                </a>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>

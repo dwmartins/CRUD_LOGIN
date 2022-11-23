@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cinzaClaro2);
+    background-color: var(--verde);
     position: relative;
 }
 
@@ -138,4 +138,93 @@
 
 .alert-cadastrado i {
     margin-right: 10px;
+}
+
+/* PAINEL */
+
+.painel, .chamados_abertos {
+    background-color: var(--verde);
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painel .menu {
+    width: 98%;
+    max-width: 600px;
+    border-radius: 5px;
+
+    background-color: var(--cinzaClaro2);
+}
+
+.painel .menu h4 {
+    color: var(--cinzaEscuro);
+    background-color: var(--cinzaClaro);
+    font-weight: bold;
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+
+.painel .menu > div {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.painel .menu > div img {
+    width: 120px;
+}
+
+/* PAGINA DE CHAMADOS */
+
+.chamados {
+    background-color: var(--cinzaClaro2);
+    width: 98%;
+    height: 500px;
+    max-width: 700px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chamados h4 {
+    color: var(--cinzaEscuro);
+    background-color: var(--cinzaClaro);
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+
+.chamados .lista_chamados {
+    height: 400px;
+    
+    overflow-y: scroll;
+}
+
+.chamados .lista_chamados div {
+    background-color: #fff;
+    padding: 5px 10px;
+    margin: 10px 5px;
+}
+
+.chamados > div h2, h3, p {
+    color: var(--cinzaEscuro);
+    margin: 5px 0;
+}
+
+.chamados .btn_voltar {
+    background-color: var(--amarelo);
+    color: var(--cinzaEscuro);
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
