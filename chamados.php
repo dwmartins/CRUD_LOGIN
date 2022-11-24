@@ -1,3 +1,8 @@
+<?php
+include "./src/controller/protege_pagina.php";
+include('./src/controller/logar.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +20,10 @@
             <h1>CRUD</h1>
         </a>
 
-        <a href="./src/controller/logout.php">Sair</a>
+        <div>
+            <p>Bem vindo: <?php echo $_SESSION['nome'];?></p>
+            <a href="./src/controller/logout.php">Sair</a>
+        </div>
     </nav>
     
     <section class="chamados_abertos">
