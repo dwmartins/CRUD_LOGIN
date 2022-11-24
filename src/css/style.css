@@ -34,6 +34,18 @@
 
 .nav_login a {
     color: var(--cinzaClaro2);
+    font-weight: bold;
+}
+
+.nav_login div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_login p {
+    color: var(--cinzaClaro);
+    font-weight: bold;
 }
 
 .login, .criar_usuario {
