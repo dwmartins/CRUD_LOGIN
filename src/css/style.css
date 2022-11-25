@@ -240,3 +240,99 @@
     justify-content: center;
     align-items: center;
 }
+
+/* PAGINA DE ABERTURA DE CHAMADO */
+
+.abrir_chamado {
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: var(--verde);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abrir_chamado > div {
+    background-color: var(--cinzaClaro2);
+    width: 97%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.titulo_abir {
+    background-color: var(--cinzaClaro);
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.abrir_chamado form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.abrir_chamado form label {
+    color: var(--cinzaEscuro);
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.abrir_chamado form input, select {
+    border-radius: 3px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.abrir_chamado form input:focus, textarea:focus{
+    outline: none;
+}
+
+.abrir_chamado form textarea{
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.botoes_abertura {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes_abertura a {
+    background-color: var(--amarelo);
+    width: 48%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--cinzaEscuro);
+    font-weight: bold;
+}
+
+.botoes_abertura a:hover {
+    background-color: var(--amareloEscuro);
+    transition: 0.5s;
+}
+
+.botoes_abertura button {
+    background-color: var(--verde);
+    width: 48%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botoes_abertura button:hover {
+    background-color: var(--verdeEscuro);
+    transition: 0.5s;
+}

@@ -31,7 +31,7 @@ include('./src/controller/logar.php');
             <h4>Menu</h4>
 
             <div>
-                <a href="#">
+                <a href="abrir_chamado.php">
                     <img src="./src/img/abrir_chamado.png" alt="Abrir chamado">
                 </a>
 
