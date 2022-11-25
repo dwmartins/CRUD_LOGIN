@@ -46,11 +46,11 @@ include "./src/controller/exibir_chamados.php";
                     foreach ($sql_query as $lista) { ?> 
                         
                         <div>
-                            <h2><?php echo $lista['titulo'] ?></h2>
+                            <h2><?php echo $lista['titulo']; ?></h2>
 
-                            <h3><?php echo $lista['categoria'] ?></h3>
+                            <h3><?php echo $lista['categoria']; ?></h3>
 
-                            <p><?php echo $lista['descricao'] ?>!</p>
+                            <p><?php echo $lista['descricao']; ?></p>
                         </div>
 
                 <?php } }?>
