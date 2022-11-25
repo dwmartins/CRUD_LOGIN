@@ -39,6 +39,15 @@ include('./src/controller/logar.php');
             endif ; 
         ?>
 
+        <?php 
+            if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+
+            <div data-aos="zoom-in" class="alert-danger">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Realize o login por favor!
+            </div>
+        <?php } ?>
+
         <form action="" method="POST">
             <label for="">Login</label>
             <input type="email" name="email">

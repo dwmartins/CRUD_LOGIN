@@ -232,13 +232,31 @@
     background-color: var(--amarelo);
     color: var(--cinzaEscuro);
     font-weight: bold;
-    width: 150px;
+    width: 48%;
     height: 30px;
     margin: 5px 10px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.chamados .btn_voltar:hover {
+    background-color: var(--amareloEscuro);
+    transition: 0.5s;
+}
+
+.nenhum_resultado {
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nenhum_resultado p{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cinzaEscuro);
 }
 
 /* PAGINA DE ABERTURA DE CHAMADO */
@@ -250,9 +268,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.abrir_chamado > div {
+.abrir_chamado .open_achamado {
     background-color: var(--cinzaClaro2);
     width: 97%;
     max-width: 600px;

@@ -32,7 +32,7 @@ include('./src/controller/criar_usuario.php');
             if(isset($_SESSION['alert'])) : ?>
             
             <div data-aos="zoom-in" class="<?php echo $_SESSION['alert']['style']; ?>">
-            <i class="<?php echo $_SESSION['alert']['icon'] ?>"></i> <?php echo $_SESSION['alert']['mensagem']; ?>
+            <i class="<?php echo $_SESSION['alert']['icon']; ?>"></i> <?php echo $_SESSION['alert']['mensagem']; ?>
             </div>
 
             <?php

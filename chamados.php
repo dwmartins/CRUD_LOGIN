@@ -1,6 +1,8 @@
 <?php
+include "./src/controller/conexao.php";
 include "./src/controller/protege_pagina.php";
-include('./src/controller/logar.php');
+include "./src/controller/logar.php";
+include "./src/controller/exibir_chamados.php";
 ?>
 
 <!DOCTYPE html>
@@ -31,45 +33,35 @@ include('./src/controller/logar.php');
             <h4>Consultar chamado</h4>
 
             <div class="lista_chamados">
-                <div>
+
+                <?php 
+                    if($numero_cliente == 0)  { ?>
+                    
+                    <div class="nenhum_resultado">
+                        <p>Nenhum chamado em aberto!</p>
+                    </div>
+
+                <?php } else { 
+                    
+                    while ($chamados = $sql_query->fetch_assoc()) { ?> 
+                        
+                        <div>
+                            <h2><?php echo $chamados['titulo'] ?></h2>
+
+                            <h3><?php echo $chamados['categoria'] ?></h3>
+
+                            <p><?php echo $chamados['descricao'] ?>!</p>
+                        </div>
+
+                <?php } }?>
+
+                <!-- <div>
                     <h2>Wi-fi</h2>
 
                     <h3>Internet</h3>
 
                     <p>Wi-fi não está funcionando!</p>
-                </div>
-
-                <div>
-                    <h2>Computador não liga</h2>
-
-                    <h3>Hardware</h3>
-
-                    <p>Computador travado, não liga!</p>
-                </div>
-
-                <div>
-                    <h2>Wi-fi</h2>
-
-                    <h3>Internet</h3>
-
-                    <p>Wi-fi não está funcionando!</p>
-                </div>
-
-                <div>
-                    <h2>Computador não liga</h2>
-
-                    <h3>Hardware</h3>
-
-                    <p>Computador travado, não liga!</p>
-                </div>
-
-                <div>
-                    <h2>Wi-fi</h2>
-
-                    <h3>Internet</h3>
-
-                    <p>Wi-fi não está funcionando!</p>
-                </div>
+                </div> -->
             </div>
 
             <a class="btn_voltar" href="painel.php">Voltar</a>

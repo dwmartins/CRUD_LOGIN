@@ -20,6 +20,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['autenticado'] = 'SIM';
 
         header("Location: painel.php");
 
@@ -46,7 +47,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
             $_SESSION['alert'] = $alert;
 
-            unset($_POST);
+        unset($_POST);
         
     }
 }
