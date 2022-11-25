@@ -43,14 +43,14 @@ include "./src/controller/exibir_chamados.php";
 
                 <?php } else { 
                     
-                    while ($chamados = $sql_query->fetch_assoc()) { ?> 
+                    foreach ($sql_query as $lista) { ?> 
                         
                         <div>
-                            <h2><?php echo $chamados['titulo'] ?></h2>
+                            <h2><?php echo $lista['titulo'] ?></h2>
 
-                            <h3><?php echo $chamados['categoria'] ?></h3>
+                            <h3><?php echo $lista['categoria'] ?></h3>
 
-                            <p><?php echo $chamados['descricao'] ?>!</p>
+                            <p><?php echo $lista['descricao'] ?>!</p>
                         </div>
 
                 <?php } }?>
