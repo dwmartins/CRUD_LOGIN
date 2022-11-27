@@ -24,7 +24,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         unset($_POST);
 
     } else {
-        $sql_code = "INSERT INTO usuarios (id, nome, email, senha) VALUES (0, '$nome', '$email', '$senha')";
+        $sql_code = "INSERT INTO usuarios (id, nome, email, senha, data) VALUES (0, '$nome', '$email', '$senha', now() )";
         $sql_query = $mysqli->query($sql_code);
 
         $_SESSION['alert'] = $alert = [];
