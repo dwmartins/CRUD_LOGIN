@@ -79,7 +79,7 @@
 }
 
 .login > form input:focus, .criar_usuario > form input:focus {
-    outline: none;
+    outline: 1px solid var(--verde);
 }
 
 .login > form label, .criar_usuario > form label {
@@ -307,7 +307,7 @@
 }
 
 .abrir_chamado form input:focus, textarea:focus{
-    outline: none;
+    outline: 1px solid var(--verde);
 }
 
 .abrir_chamado form textarea{
