@@ -130,6 +130,10 @@
     top: 10px;
 }
 
+.alert-danger.alertNone {
+    display: none;
+}
+
 .alert-danger i {
     margin-right: 10px;
 }
@@ -151,6 +155,32 @@
 .alert-cadastrado i {
     margin-right: 10px;
 }
+
+.validacoes {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: 999;
+}
+
+.validaLogin {
+    display: flex;
+    align-items: center;
+
+    background-color: #F8D7DA;
+    color: #ff2525;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 40px;
+    width: 80%;
+}
+
+.validacoes i {
+    margin-right: 10px;
+}
+
 
 /* PAINEL */
 

@@ -26,6 +26,10 @@ include('./src/controller/logar.php');
 
     <section class="login">
 
+        <div class="validacoes">
+            <!-- Validações de login -->
+        </div>
+
         <?php
             if(isset($_SESSION['alert'])) : ?>
             
@@ -36,6 +40,7 @@ include('./src/controller/logar.php');
             <?php
                 unset($_SESSION['alert']['mensagem']);
                 unset($_SESSION['alert']['style']);
+                unset($_POST);
             endif ; 
         ?>
 
@@ -48,19 +53,21 @@ include('./src/controller/logar.php');
             </div>
         <?php } ?>
 
-        <form action="" method="POST">
+        <form action="" method="POST" id="form">
             <label for="">Login</label>
-            <input type="email" name="email">
+            <input type="email" name="email" id="email">
 
             <label for="">Senha</label>
-            <input type="password" name="senha">
+            <input type="password" name="senha" id="senha">
 
-            <button>ENTRAR</button>
+            <button id="btn_submit">ENTRAR</button>
 
             <p>Não possui conta? <a href="criar_login.php">Criar nova conta</a></p>
 
         </form>
     </section>
+
+    <script src="./src/js/valida_login.js"></script>
 
     <script>
         AOS.init();
