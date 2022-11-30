@@ -223,6 +223,10 @@
 
 /* PAGINA DE CHAMADOS */
 
+.chamados_abertos {
+    position: relative;
+}
+
 .chamados {
     background-color: var(--cinzaClaro2);
     width: 98%;
@@ -245,6 +249,12 @@
     height: 400px;
     
     overflow-y: scroll;
+}
+
+.chamados .lista_chamados div span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .chamados .lista_chamados div {
@@ -288,6 +298,46 @@
     font-weight: bold;
     color: var(--cinzaEscuro);
 }
+
+.btn_chamados_abertos {
+    display: flex;
+    gap: 10px;
+}
+
+.btn_chamados_abertos a {
+    background-color: var(--verde);
+    width: 70px;
+    height: 25px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn_chamados_abertos a:hover{
+    background-color: var(--verdeEscuro);
+    transition: 0.5s;
+}
+
+.btn_chamados_abertos button {
+    width: 70px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--vermelho);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn_chamados_abertos button:hover{
+    background-color: var(--vermelhoEscuro);
+    transition: 0.5s;
+}
+
 
 /* PAGINA DE ABERTURA DE CHAMADO */
 

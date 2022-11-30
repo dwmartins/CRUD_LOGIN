@@ -29,6 +29,7 @@ include "./src/controller/exibir_chamados.php";
     </nav>
     
     <section class="chamados_abertos">
+
         <div class="chamados">
             <h4>Consultar chamado</h4>
 
@@ -46,11 +47,32 @@ include "./src/controller/exibir_chamados.php";
                     foreach ($sql_query as $lista) { ?> 
                         
                         <div>
-                            <h2><?php echo $lista['titulo']; ?></h2>
+                            <span>
+                                <h2><?php echo $lista['titulo']; ?></h2>
+                                <p>
+                                    <?php 
+                                        $data = date("d/m/y", strtotime($lista['data']));
+
+                                        echo $data;
+                                    ?>
+                                </p>
+                            </span>
+
+                            <hr>
 
                             <h3><?php echo $lista['categoria']; ?></h3>
 
                             <p><?php echo $lista['descricao']; ?></p>
+
+                            <div class="btn_chamados_abertos">
+                                <a href="./editar_chamado.php?id=<?= $lista['id']; ?>">Editar</a>
+
+                                <form action="" method="POST">
+
+                                    <button>Finalizar</button>
+                                    
+                                </form>
+                            </div>
                         </div>
 
                 <?php } }?>

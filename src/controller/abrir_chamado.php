@@ -6,7 +6,7 @@
         $categoria = $_POST['categoria'];
         $descricao = $_POST['descricao'];
 
-        $sql_code = "INSERT INTO chamados (id, titulo, descricao, categoria, data) VALUES (0, '$titulo', '$categoria', '$descricao', now())";
+        $sql_code = "INSERT INTO chamados (id, titulo, categoria, descricao, data) VALUES (0, '$titulo', '$categoria', '$descricao', now())";
         $sql_code = $mysqli->query($sql_code);
 
         header('Location: chamados.php');
