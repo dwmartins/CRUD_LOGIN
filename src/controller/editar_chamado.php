@@ -14,7 +14,12 @@ if(isset($_POST['titulo']) || isset($_POST['categoria']) || isset($_POST['descri
 
     $sql_query = $mysqli->query("UPDATE chamados SET titulo = '$titulo', categoria = '$categoria', descricao = '$descricao' WHERE id = '$id' ");
 
-    header('Location: chamados.php');
+    $_SESSION['alert'] = $alert = [];
+        $alert = [
+                    'mensagem' => 'Chamado atualizado com sucesso!'
+                ];
+
+        $_SESSION['alert'] = $alert;
 }
 
 ?>

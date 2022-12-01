@@ -2,7 +2,7 @@
 include('./src/controller/conexao.php');
 include "./src/controller/protege_pagina.php";
 include "./src/controller/exibir_chamados.php";
-include "./src/controller/editar_cliente.php";
+include "./src/controller/editar_chamado.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +19,30 @@ include "./src/controller/editar_cliente.php";
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+
+    <?php
+
+        if(isset($_SESSION['alert'])) : ?>
+
+            <div class="alert_editado">
+                <div data-aos="zoom-in" class="alert_editado">
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Chamado atualizado com sucesso!
+                    </span>
+
+
+                    <a href="./chamados.php">Voltar</a>
+                </div>
+            </div>
+        
+            <?php 
+                unset($_SESSION['alert']);
+        endif ;
+
+    ?>
+
+    
     
     <nav class="nav_login">
         <a href="painel.php">
@@ -40,11 +64,11 @@ include "./src/controller/editar_cliente.php";
         
             <form action="" method="POST" class="form_abertura">
                 <label for="">Titulo</label>
-                <input type="text" name="titulo" id="" value="<?= $lista['titulo']; ?>">
+                <input type="text" name="titulo" id="titulo" value="<?= $lista['titulo']; ?>">
 
                 <label for="">Categoria</label>
-                    <select name="categoria">
-                        <option value=""><?= $lista['categoria']; ?></option>
+                    <select name="categoria" id="categoria">
+                        <option value=""></option>
                         <option value="internet">Internet</option>
                         <option value="login">Login</option>
                         <option value="hardware">Hardware</option>
@@ -52,7 +76,7 @@ include "./src/controller/editar_cliente.php";
                     </select>
 
                 <label for="">Descrição</label>
-                <textarea name="descricao" id="" cols="30" rows="5"><?= $lista['descricao'] ?></textarea>
+                <textarea name="descricao" id="descricao" cols="30" rows="5"><?= $lista['descricao'] ?></textarea>
 
                 <div class="botoes_abertura">
                     <a href="./chamados.php">Voltar</a>
@@ -62,6 +86,8 @@ include "./src/controller/editar_cliente.php";
     
         </div>
     </section>
+
+    <script src="./src/js/edita_chamado.js"></script>
 
     <script>
         AOS.init();

@@ -20,6 +20,10 @@
     text-decoration: none;
 }
 
+body {
+    position: relative;
+}
+
 .nav_login {
     background-color: var(--cinzaEscuro);
     width: 100%;
@@ -180,7 +184,46 @@
 .validacoes i {
     margin-right: 10px;
 }
+.alert_editado {
+    width: 100%;
+    height: 100vh;
+    background-color: #31333cc0;
+    backdrop-filter: blur(3px);
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.alert_editado div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    background-color: #CFE2FF;
+    color: #46A1EB;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 40%;
+    width: 50%;
+}
+
+.alert_editado a {
+    background-color: #46A1EB;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.alert_editado i {
+    margin-right: 5px;
+}
 
 /* PAINEL */
 
