@@ -225,6 +225,28 @@ body {
     margin-right: 5px;
 }
 
+.alert_abrir_chamado {
+    display: none;
+    align-items: center;
+
+    background-color: #F8D7DA;
+    color: #ff2525;
+    border-radius: 3px;
+    padding: 0 30px;
+    height: 40px;
+    width: 80%;
+    position: absolute;
+    top: 10px;
+}
+
+.alert_abrir_chamado i {
+    margin-left: 5px;
+}
+
+.alert_abrir_chamado.abrir_alerta {
+    display: flex;
+}
+
 /* PAINEL */
 
 .painel, .chamados_abertos {

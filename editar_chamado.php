@@ -87,8 +87,6 @@ include "./src/controller/editar_chamado.php";
         </div>
     </section>
 
-    <script src="./src/js/edita_chamado.js"></script>
-
     <script>
         AOS.init();
     </script>

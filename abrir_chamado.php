@@ -32,17 +32,21 @@ include "./src/controller/abrir_chamado.php";
 
     <section class="abrir_chamado">
 
+        <div data-aos="zoom-in" class="alert_abrir_chamado">
+            <!-- Validações -->
+        </div>
+
         <div class="open_achamado">
             <div class="titulo_abir">
                 <p>Abertura de chamado</p>
             </div>
         
-            <form action="abrir_chamado.php" method="POST" class="form_abertura">
+            <form action="abrir_chamado.php" method="POST" class="form_abertura" id="form">
                 <label for="">Titulo</label>
-                <input type="text" name="titulo" id="">
+                <input type="text" name="titulo" id="titulo">
 
                 <label for="">Categoria</label>
-                    <select name="categoria" id="">
+                    <select name="categoria" id="categoria">
                         <option value=""></option>
                         <option value="internet">Internet</option>
                         <option value="login">Login</option>
@@ -51,7 +55,7 @@ include "./src/controller/abrir_chamado.php";
                     </select>
 
                 <label for="">Descrição</label>
-                <textarea name="descricao" id="" cols="30" rows="5"></textarea>
+                <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
 
                 <div class="botoes_abertura">
                     <a href="painel.php">Voltar</a>
@@ -61,6 +65,8 @@ include "./src/controller/abrir_chamado.php";
     
         </div>
     </section>
+
+    <script src="./src/js/abrir_chamado.js"></script>
 
     <script>
         AOS.init();
