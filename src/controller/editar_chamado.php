@@ -20,6 +20,8 @@ if(isset($_POST['titulo']) || isset($_POST['categoria']) || isset($_POST['descri
                 ];
 
         $_SESSION['alert'] = $alert;
+
+    header('Location: chamados.php');
 }
 
 ?>

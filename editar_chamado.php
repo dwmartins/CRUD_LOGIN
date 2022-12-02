@@ -18,32 +18,9 @@ include "./src/controller/editar_chamado.php";
     <script src="https://kit.fontawesome.com/b019fa643e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
+
 <body>
-
-    <?php
-
-        if(isset($_SESSION['alert'])) : ?>
-
-            <div class="alert_editado">
-                <div data-aos="zoom-in" class="alert_editado">
-                    <span>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Chamado atualizado com sucesso!
-                    </span>
-
-
-                    <a href="./chamados.php">Voltar</a>
-                </div>
-            </div>
-        
-            <?php 
-                unset($_SESSION['alert']);
-        endif ;
-
-    ?>
-
-    
-    
     <nav class="nav_login">
         <a href="painel.php">
             <h1>CRUD</h1>
@@ -68,7 +45,7 @@ include "./src/controller/editar_chamado.php";
 
                 <label for="">Categoria</label>
                     <select name="categoria" id="categoria">
-                        <option value=""></option>
+                        <option value="<?= $lista['categoria'] ?>"></option>
                         <option value="internet">Internet</option>
                         <option value="login">Login</option>
                         <option value="hardware">Hardware</option>
@@ -86,6 +63,8 @@ include "./src/controller/editar_chamado.php";
     
         </div>
     </section>
+
+    <script src="./src/js/atualiza_chamado.js"></script>
 
     <script>
         AOS.init();

@@ -13,7 +13,10 @@ include "./src/controller/exibir_chamados.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamdos</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://kit.fontawesome.com/b019fa643e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
@@ -30,7 +33,7 @@ include "./src/controller/exibir_chamados.php";
     
     <section class="chamados_abertos">
 
-        <div class="chamados">
+        <div data-aos="zoom-in" class="chamados">
             <h4>Consultar chamado</h4>
 
             <div class="lista_chamados">
@@ -65,30 +68,26 @@ include "./src/controller/exibir_chamados.php";
                             <p><?php echo $lista['descricao']; ?></p>
 
                             <div class="btn_chamados_abertos">
-                                <a href="./editar_chamado.php?id=<?= $lista['id']; ?>">Editar</a>
+                                <a class="btn_editar" href="./editar_chamado.php?id=<?= $lista['id']; ?>">Editar</a>
 
-                                <form action="" method="POST">
-
-                                    <button>Finalizar</button>
-                                    
-                                </form>
+                                <button class="btn_finalizar">Finalizar</button>
                             </div>
                         </div>
 
                 <?php } }?>
-
-                <!-- <div>
-                    <h2>Wi-fi</h2>
-
-                    <h3>Internet</h3>
-
-                    <p>Wi-fi não está funcionando!</p>
-                </div> -->
             </div>
 
             <a class="btn_voltar" href="painel.php">Voltar</a>
         </div>
     </section>
 
+    
+    
+    
+    <script src="./src/js/finlizar_chamado.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

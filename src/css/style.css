@@ -20,10 +20,6 @@
     text-decoration: none;
 }
 
-body {
-    position: relative;
-}
-
 .nav_login {
     background-color: var(--cinzaEscuro);
     width: 100%;
@@ -184,49 +180,32 @@ body {
 .validacoes i {
     margin-right: 10px;
 }
-.alert_editado {
-    width: 100%;
+
+.chamado_atualizado {
+    position: absolute;
     height: 100vh;
+    width: 100%;
+    z-index: 999;
     background-color: #31333cc0;
     backdrop-filter: blur(3px);
-    position: absolute;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.alert_editado div {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-
-    background-color: #CFE2FF;
-    color: #46A1EB;
-    border-radius: 3px;
-    padding: 0 30px;
-    height: 40%;
-    width: 50%;
-}
-
-.alert_editado a {
-    background-color: #46A1EB;
-    width: 80px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 3px;
-}
-
-.alert_editado i {
-    margin-right: 5px;
-}
-
-.alert_abrir_chamado {
     display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.chamado_atualizado.abrirAlerta {
+    display: flex;
+}
+
+.chamado_atualizado div {
+    width: 50%;
+    min-width: 250px;
+    height: 300px;
+    background-color: red;
+}
+
+.alert_abrir_chamado{
+    display: flex;
     align-items: center;
 
     background-color: #F8D7DA;
@@ -235,16 +214,25 @@ body {
     padding: 0 30px;
     height: 40px;
     width: 80%;
-    position: absolute;
-    top: 10px;
+    margin: 0 auto;
 }
 
 .alert_abrir_chamado i {
-    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.alert_abrir_chamado.abrir_alerta {
-    display: flex;
+.alertas {
+    position: absolute;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.alertas.fechaAlerta {
+    display: none;
+}
+.alert_abrir_chamado.alertas.fechaAlerta {
+    display: none;
 }
 
 /* PAINEL */
@@ -369,7 +357,7 @@ body {
     gap: 10px;
 }
 
-.btn_chamados_abertos a {
+.btn_editar {
     background-color: var(--verde);
     width: 70px;
     height: 25px;
@@ -382,23 +370,24 @@ body {
     font-size: 14px;
 }
 
-.btn_chamados_abertos a:hover{
+.btn_editar:hover{
     background-color: var(--verdeEscuro);
     transition: 0.5s;
 }
 
-.btn_chamados_abertos button {
+.btn_finalizar {
     width: 70px;
     height: 25px;
     border: none;
     border-radius: 3px;
     background-color: var(--vermelho);
     color: #fff;
-    cursor: pointer;
     font-weight: 600;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.btn_chamados_abertos button:hover{
+.btn_finalizar:hover{
     background-color: var(--vermelhoEscuro);
     transition: 0.5s;
 }

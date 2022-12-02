@@ -17,7 +17,7 @@ include "./src/controller/abrir_chamado.php";
     <script src="https://kit.fontawesome.com/b019fa643e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body>
+<body id="body_abrir_chamado">
     
     <nav class="nav_login">
         <a href="painel.php">
@@ -32,8 +32,8 @@ include "./src/controller/abrir_chamado.php";
 
     <section class="abrir_chamado">
 
-        <div data-aos="zoom-in" class="alert_abrir_chamado">
-            <!-- Validações -->
+        <div class="alertas">
+            <!-- ALERTAS -->
         </div>
 
         <div class="open_achamado">

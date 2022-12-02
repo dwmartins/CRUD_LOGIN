@@ -2,6 +2,7 @@ const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const validaLogin = document.querySelector(".validacoes")
 const form = document.getElementById("form");
+const alertaDanger = document.querySelector(".alert-danger");
 
 form.addEventListener('submit', function(e) {
 
@@ -17,10 +18,6 @@ form.addEventListener('submit', function(e) {
         validaLogin.innerHTML = '<div data-aos="zoom-in" class="validaLogin"> <i class = "fa-solid fa-triangle-exclamation"></i> Por favor preencha sua senha! </div>';
     }
 });
-
-// ******************************
-
-const alertaDanger = document.querySelector(".alert-danger");
 
 function stopAlert() {
     alertaDanger.classList.toggle("alertNone")
