@@ -19,5 +19,7 @@ form.addEventListener('submit', function(e) {
         e.preventDefault();
         alertas.innerHTML = '<div class="alert_abrir_chamado" data-aos="zoom-in"> <i class="fa-solid fa-triangle-exclamation"></i> Preencha a descrição por favor</div>';
         descricao.focus();
+    } else {
+        alert('Chamado aberto com sucesso!')
     }
 })
